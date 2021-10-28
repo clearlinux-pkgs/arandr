@@ -4,7 +4,7 @@
 #
 Name     : arandr
 Version  : 0.1.10
-Release  : 13
+Release  : 14
 URL      : https://gitlab.com/arandr/arandr/-/archive/0.1.10/arandr-0.1.10.tar.bz2
 Source0  : https://gitlab.com/arandr/arandr/-/archive/0.1.10/arandr-0.1.10.tar.bz2
 Summary  : Provide a simple visual front end for XRandR 1.2.
