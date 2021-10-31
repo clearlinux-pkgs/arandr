@@ -4,10 +4,10 @@
 #
 Name     : arandr
 Version  : 0.1.10
-Release  : 17
+Release  : 18
 URL      : https://gitlab.com/arandr/arandr/-/archive/0.1.10/arandr-0.1.10.tar.bz2
 Source0  : https://gitlab.com/arandr/arandr/-/archive/0.1.10/arandr-0.1.10.tar.bz2
-Summary  : Provide a simple visual front end for XRandR 1.2.
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: arandr-bin = %{version}-%{release}
@@ -21,20 +21,9 @@ BuildRequires : buildreq-distutils3
 BuildRequires : docutils
 
 %description
-checklist before release:
-* work on branch master
-* set version in `setup.py` and `screenlayout/meta.py`
-* make sure the latest NEWS entry matches
-* commit as 'Ready for release ...'
-* `git log --first-parent master > ChangeLog.new`
-* `git checkout release`
-* `git merge --no-ff master` (files may be modified in both: deleted in release, modified in master. the probably hould still be deleted.)
-* `mv ChangeLog.new ChangeLog; git commit --amend -a` and set commit message to last NEWS entry
-* `git tag $VERSION`
-* `git archive $VERSION --prefix="arandr-$VERSION/" | gzip -9 > ../arandr_$VERSION.orig.tar.gz`
-* `pristine-tar commit ../arandr_$VERSION.orig.tar.gz $VERSION`
-* push to all mirrors, including tags
-* notify maintainers
+==========================
+ARandR: Another XRandR GUI
+==========================
 
 %package bin
 Summary: bin components for the arandr package.
@@ -105,16 +94,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582846277
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1635703528
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
