@@ -4,7 +4,7 @@
 #
 Name     : arandr
 Version  : 0.1.11
-Release  : 23
+Release  : 24
 URL      : https://gitlab.com/arandr/arandr/-/archive/0.1.11/arandr-0.1.11.tar.bz2
 Source0  : https://gitlab.com/arandr/arandr/-/archive/0.1.11/arandr-0.1.11.tar.bz2
 Summary  : No detailed summary available
